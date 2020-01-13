@@ -53,13 +53,9 @@ def isFaculty():
     else:
         return False
 
-# checks to see if the user is logged in
 def isLoggedIn():
     sessioncreate()
-    if session.get('logged_in') is True:
-        return True
-    else:
-        return False
+    return session.get('logged_in')
 
 #if user is logged in, will return the file they want
 #otherwise, redirects to login page, and will redirect to page they request when done
